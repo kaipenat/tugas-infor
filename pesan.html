@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pesan Sekarang - SayurBuah.ID</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .form-title {
+      margin-bottom: 40px;
+    }
+
+    .form {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: border 0.3s ease;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #4CAF50;
+      outline: none;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #388E3C;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      background-color: #ccc;
+      color: #333;
+      padding: 10px 16px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Form Pemesanan</h1>
+    <p class="form-title">Isi data di bawah untuk memesan produk segar pilihan Anda</p>
+  </header>
+
+  <section class="section">
+    <form action="#" method="post" class="form">
+      <label for="nama">Nama Lengkap:</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="alamat">Alamat Pengiriman:</label>
+      <textarea id="alamat" name="alamat" rows="4" required></textarea>
+
+      <label for="produk">Pilih Produk:</label>
+      <select id="produk" name="produk" required>
+        <option value="">-- Pilih Produk --</option>
+        <option value="sayur">Paket Sayur Sehat</option>
+        <option value="buah">Paket Buah Mix</option>
+      </select>
+
+      <label for="jadwal">Jadwal Pengiriman:</label>
+      <input type="date" id="jadwal" name="jadwal" required>
+
+      <label for="catatan">Catatan Tambahan:</label>
+      <textarea id="catatan" name="catatan" rows="3"></textarea>
+
+      <button type="submit">Kirim Pesanan</button>
+    </form>
+
+    <div style="text-align:center;">
+    <a href="index.html" class="back-button">← Kembali ke Beranda</a>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SayurBuah.ID - Semua Hak Dilindungi</p>
+    <p>Gratis Ongkir Jogja & Sekitarnya | Sistem Jemput Balik untuk Keranjang</p>
+  </footer>
+
+</body>
+</html>

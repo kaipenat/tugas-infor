@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Masuk / Daftar - SayurBuah.ID</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #4CAF50;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .switch {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .switch a {
+      color: #4CAF50;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2 id="form-title">Masuk ke SayurBuah.ID</h2>
+    <form id="userForm" onsubmit="handleSubmit(event)">
+      <div id="nameField" style="display: none;">
+        <input type="text" id="nama" placeholder="Nama Lengkap" />
+      </div>
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Kata Sandi" required />
+      <button type="submit" id="submitBtn">Masuk</button>
+    </form>
+    <div class="switch">
+      <span id="toggleText">Belum punya akun?</span>
+      <a onclick="toggleForm()">Daftar</a>
+    </div>
+  </div>
+
+  <script>
+    let isDaftar = false;
+
+    function toggleForm() {
+      isDaftar = !isDaftar;
+
+      document.getElementById("form-title").textContent = isDaftar ? "Daftar Akun Baru" : "Masuk ke SayurBuah.ID";
+      document.getElementById("submitBtn").textContent = isDaftar ? "Daftar" : "Masuk";
+      document.getElementById("toggleText").textContent = isDaftar ? "Sudah punya akun?" : "Belum punya akun?";
+      document.querySelector(".switch a").textContent = isDaftar ? "Masuk" : "Daftar";
+
+      document.getElementById("nameField").style.display = isDaftar ? "block" : "none";
+    }
+
+    function handleSubmit(event) {
+      event.preventDefault();
+
+      const nama = document.getElementById("nama").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      // Simulasi penyimpanan (bisa pakai localStorage)
+      if (isDaftar) {
+        if (!nama || !email || !password) {
+          alert("Mohon lengkapi semua data.");
+          return;
+        }
+        alert("Pendaftaran berhasil! Selamat datang, " + nama + "!");
+      } else {
+        alert("Selamat datang kembali!");
+      }
+
+      // Redirect ke beranda
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>
