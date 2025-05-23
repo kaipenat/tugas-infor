@@ -45,21 +45,21 @@ nav a:hover {
 }
 
 .hero {
-  background: url('https://images.unsplash.com/photo-1587300003388-59208cc962cb') no-repeat center center;
+  background: url('background.png') no-repeat center center;
   background-size: cover;
   color: white;
-  padding: 120px 20px;
+  padding: 200px 20px;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 54px;
-  margin: 0;
+  font-size: 50px;
+  margin: 250px 0 0px;
 }
 
 .hero p {
-  font-size: 22px;
-  margin: 20px 0;
+  font-size: 25px;
+  margin: 0 0 30px;
 }
 
 .hero a {
@@ -104,8 +104,12 @@ nav a:hover {
 
 .card img {
   width: 100%;
-  border-radius: 8px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
+
 
 .card h3 {
   margin: 15px 0 5px;
@@ -169,6 +173,7 @@ footer a {
   }
 
   .card {
-    width: 90%;
+    width: 400px;
+  max-width: 90vw;
   }
 }

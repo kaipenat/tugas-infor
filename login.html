@@ -83,7 +83,7 @@
       <span id="toggleText">Belum punya akun?</span>
       <a onclick="toggleForm()">Daftar</a>
     </div>
-  </div>
+    <a href="index.html" style="display: inline-block; margin-top: 15px; color: #4CAF50; font-weight: bold; text-decoration: none;">← Kembali ke Beranda</a>
 
   <script>
     let isDaftar = false;
@@ -106,7 +106,7 @@
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
 
-      // Simulasi penyimpanan (bisa pakai localStorage)
+      
       if (isDaftar) {
         if (!nama || !email || !password) {
           alert("Mohon lengkapi semua data.");
@@ -117,7 +117,7 @@
         alert("Selamat datang kembali!");
       }
 
-      // Redirect ke beranda
+     
       window.location.href = "index.html";
     }
   </script>
